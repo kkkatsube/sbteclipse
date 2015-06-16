@@ -319,7 +319,7 @@ private object Eclipse extends EclipseSDTConfig {
         (externalDependencies map libEntry(buildDirectory, baseDirectory, relativizeLibs, state)) ++
         (Seq(jreContainer) map EclipseClasspathEntry.Con) ++
         (Seq("bin") map EclipseClasspathEntry.Output)
-      <classpath>{ entries map (_.toXml) }</classpath>
+      <classpath>{ entries map (_.toXml) }<classpathentry kind="lib" path="target/scala-2.11/classes"/></classpath>
     }
   }
 

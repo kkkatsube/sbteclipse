@@ -9,7 +9,7 @@ import com.typesafe.sbt.SbtGit._
 
 object Build extends Build {
 
-  val baseVersion = "4.0.0"
+  val baseVersion = "4.0.1"
 
   lazy val root = Project(
     "sbteclipse-plugin",
@@ -30,7 +30,7 @@ object Build extends Build {
     bintrayPublishSettings ++
     Seq(
       git.baseVersion := baseVersion,
-      organization := "com.typesafe.sbteclipse",
+      organization := "com.github.kkkatsube.sbteclipse",
       // version is defined in version.sbt in order to support sbt-release
       scalacOptions ++= Seq("-unchecked", "-deprecation"),
       sbtPlugin := true,
